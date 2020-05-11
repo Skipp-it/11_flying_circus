@@ -1,5 +1,7 @@
 # TODO: add your users and hashed passwords here
-users = {'john@doe.com': '$2b$12$/TYFvXOy9wDQUOn5SKgTzedwiqB6cm.UIfPewBnz0kUQeK9Eu4mSC'}
+
+users = {'john@doe.com': '3e0fba9a86f3c2bce6b3652e1e394565'}
+
 
 questions = {
     "I ______ bus on Mondays.": {
@@ -33,3 +35,5 @@ questions = {
         "d. do your sister work": False
     }
 }
+
+

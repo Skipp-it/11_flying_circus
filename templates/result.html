@@ -1,0 +1,16 @@
+
+
+{% extends 'index.html' %}
+
+    {% block content %}
+
+<div>
+
+    <h1>Congratulations your score is</h1>
+    <h2>{{session['correct_answers']}}/{{number_of_questions}}</h2>
+
+</div>
+
+
+
+    {% endblock %}

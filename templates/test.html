@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+    {% block content %}
+
+
+<div>
+    <form method="POST">
+    <h2>{{question}}</h2><br>
+
+    {% for option in test_data[question] %}
+        <label for="answer">{{option}}</label>
+        <h3><input type="radio" id="answer" name="answer" value="{{test_data[question][option]}}"></h3>
+<!--<br>-->
+    {% endfor %}
+
+        {% if  session['question_nr'] == number_of_questions-1 %}
+        <button type="submit">Finish Test</button>
+        {% else %}
+        <button type="submit">Next question</button>
+        {% endif %}
+    </form>
+</div>
+
+    {% endblock %}

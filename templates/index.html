@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transparent login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/style.css') }}">
+
+
+</head>
+    <body>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+                 <li>{{ message }}</li>
+            {% endfor %}
+             </ul>
+        {% endif %}
+    {% endwith %}
+
+
+    {% block content%}
+
+    <form action="/login" class="login-box">
+        <input type="submit" name="login" value="Authentication">
+    </form>
+
+        {% if 'logged_in' in session %}
+            <form action="/logout" class="login-box">
+                <input type="submit" name="logout" value="Logout">
+            </form>
+
+            <form action="/test" class="login-box">
+                <input type="submit" name="test" value="Go to test">
+            </form>
+
+        {% endif %}
+
+    {% endblock %}
+    </body>
+</html>
